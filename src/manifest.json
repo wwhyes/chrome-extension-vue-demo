@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "插件名称",
+  "description": "插件的简介",
+  "version": "0.0.1",
+  "browser_action": {
+    "default_icon": "img/48x48.png",
+    "default_title": "Amazon云霄",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "js/hot-reload.js",
+      "js/background.js"
+    ]
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["js/content.js"],
+    "run_at": "document_end"
+  }],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "devtools_page": "devcreate.html"
+}

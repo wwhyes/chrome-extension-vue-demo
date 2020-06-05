@@ -1,5 +1,7 @@
 <template>
-  <div id="app">dev tool</div>
+  <div id="app">
+    dev tool
+  </div>
 </template>
 
 <script>
